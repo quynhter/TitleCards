@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowTitle">
+   <string>Титульники</string>
+  </property>
+
+  <property name="minimumSize">
+   <size>
+    <width>480</width>
+    <height>650</height>
+   </size>
+  </property>
+
+  <property name="locale">
+   <locale language="Russian" country="Russia"/>
+  </property>
+
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+
+      <widget class="QWidget" name="scrollContent">
+       <layout class="QVBoxLayout" name="contentLayout">
+
+        <!-- ШАБЛОН -->
+        <item>
+         <widget class="QGroupBox" name="templateGroup">
+          <property name="title">
+           <string>Шаблон</string>
+          </property>
+          <layout class="QVBoxLayout">
+
+           <item>
+            <widget class="QComboBox" name="samples"/>
+           </item>
+
+           <item>
+            <widget class="QLabel">
+             <property name="text">
+              <string>Наименование шаблона</string>
+             </property>
+            </widget>
+           </item>
+
+           <item>
+            <widget class="QLineEdit" name="sample_text_box"/>
+           </item>
+
+           <item>
+            <layout class="QHBoxLayout">
+             <item><widget class="QPushButton" name="loadSample"><property name="text"><string>Загрузить</string></property></widget></item>
+             <item><widget class="QPushButton" name="saveSample"><property name="text"><string>Сохранить</string></property></widget></item>
+             <item><widget class="QPushButton" name="deleteSample"><property name="text"><string>Удалить</string></property></widget></item>
+             <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+             <item><widget class="QPushButton" name="createPDF"><property name="text"><string>Создать PDF</string></property></widget></item>
+            </layout>
+           </item>
+
+          </layout>
+         </widget>
+        </item>
+
+        <!-- ПРОЕКТ -->
+        <item>
+         <widget class="QGroupBox" name="projectGroup">
+          <property name="title">
+           <string>Проект</string>
+          </property>
+          <layout class="QVBoxLayout">
+
+           <item><widget class="QLabel"><property name="text"><string>Наименование объекта</string></property></widget></item>
+           <item><widget class="QTextEdit" name="object_text_box"/></item>
+
+           <item><widget class="QLabel"><property name="text"><string>Наименование проекта</string></property></widget></item>
+           <item><widget class="QTextEdit" name="project_text_box"/></item>
+
+           <item><widget class="QLabel"><property name="text"><string>Шифр проекта</string></property></widget></item>
+           <item><widget class="QLineEdit" name="cipher_text_box"/></item>
+
+          </layout>
+         </widget>
+        </item>
+
+        <!-- УЧАСТНИКИ -->
+        <item>
+         <widget class="QGroupBox" name="participantsGroup">
+          <property name="title">
+           <string>Участники</string>
+          </property>
+          <layout class="QGridLayout">
+
+           <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Заказчик</string></property></widget></item>
+           <item row="1" column="0"><widget class="QLineEdit" name="customer_text_box"/></item>
+
+           <item row="0" column="1"><widget class="QLabel"><property name="text"><string>Технический заказчик</string></property></widget></item>
+           <item row="1" column="1"><widget class="QLineEdit" name="tech_cust_text_box"/></item>
+
+           <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Генеральный подрядчик</string></property></widget></item>
+           <item row="3" column="0"><widget class="QLineEdit" name="gen_dev_text_box"/></item>
+
+           <item row="2" column="1"><widget class="QLabel"><property name="text"><string>Подрядчик</string></property></widget></item>
+           <item row="3" column="1"><widget class="QLineEdit" name="dev_text_box"/></item>
+
+          </layout>
+         </widget>
+        </item>
+
+        <!-- ПАРАМЕТРЫ -->
+        <item>
+         <widget class="QGroupBox" name="paramsGroup">
+          <property name="title">
+           <string>Параметры</string>
+          </property>
+          <layout class="QGridLayout">
+
+           <item row="0" column="0">
+            <widget class="QLabel">
+             <property name="text">
+              <string>Экземпляров</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QSpinBox" name="copy_text_box">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+             <property name="value">
+              <number>5</number>
+             </property>
+            </widget>
+           </item>
+
+           <item row="0" column="1">
+            <widget class="QLabel">
+             <property name="text">
+              <string>Томов</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="vol_text_box">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>25</number>
+             </property>
+             <property name="value">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+
+           <item row="2" column="0">
+            <widget class="QLabel">
+             <property name="text">
+              <string>Город</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLineEdit" name="city_text_box"/>
+           </item>
+
+           <item row="2" column="1">
+            <widget class="QLabel">
+             <property name="text">
+              <string>Год</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="year_text_box">
+             <property name="minimum">
+              <number>1973</number>
+             </property>
+             <property name="maximum">
+              <number>3000</number>
+             </property>
+             <property name="value">
+              <number>1973</number>
+             </property>
+            </widget>
+           </item>
+
+          </layout>
+         </widget>
+        </item>
+
+        <item>
+         <spacer>
+          <property name="orientation"><enum>Qt::Vertical</enum></property>
+         </spacer>
+        </item>
+
+       </layout>
+      </widget>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+ </widget>
+
+ <resources/>
+ <connections/>
+</ui>
