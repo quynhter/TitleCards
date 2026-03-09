@@ -1,2 +1,2 @@
-# TitleCards
-Helps to quickly create a title cards for executive documentation
+# QuickTitleCards
+Поможет быстро создать титульные страницы и корешки для исполнительно-технической документации
