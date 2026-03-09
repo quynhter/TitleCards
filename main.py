@@ -258,14 +258,10 @@ def create_PDF():
             data['copy_number'] = "Оригинал"
           else:
             data['copy_number'] = f"{i} экз."
-          if vol_text_box.value() == 1:
+          for j in range(1, vol_text_box.value() + 1):
+            data['volume_number'] = j
             c = drawTitle(c, data)
             с = drawSpine(c, data)
-          else:
-            for j in range(1, vol_text_box.value() + 1):
-              data['volume_number'] = j
-              c = drawTitle(c, data)
-              с = drawSpine(c, data)
     saveChangedFile(c)
     QMessageBox.information(window, "Действие", f"Файл успешно создан по пути: \n{path}")
 
