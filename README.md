@@ -3,5 +3,5 @@
 <p align="center">
   <img width="484" height="790" alt="image" src="https://github.com/user-attachments/assets/0d5d4f41-16f8-4cf3-8574-86b960593419" />
 </p>
-<p align="center" style="font-size:11px">Изображение главного окна программы</h3>
+<p align="center" style="font-size:11px">Изображение главного окна программы</p>
 После первого запуска программы будет создана директория `results` и файл `config.json`. В файл будут сохранятся ваши шаблоны, а в директорию - сгенерированные PDF файлы.
